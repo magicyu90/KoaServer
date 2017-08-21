@@ -1,8 +1,14 @@
-import Koa from "koa";
-import {loggerFunc} from "./src/middleware/logger-async";
+import Koa from 'koa'
+import mongoose from 'mongoose'
+import bodyParser from 'koa-bodyparser'
+import config from './config'
+
 const app = new Koa();
 
-app.use(loggerFunc());
+mongoose.Promise = global.Promise
+mongoose.connect(config.database)
+
+app.use(bodyParser);
 
 app.use(async(ctx) => {
     ctx.body = "Hello Hugo";

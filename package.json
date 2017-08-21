@@ -4,7 +4,7 @@
   "description": "Build node server with koa ",
   "main": "index.js",
   "scripts": {
-    "start":"./node_modules/babel-cli/bin/babel-node.js ./index.js"
+    "start": "./node_modules/babel-cli/bin/babel-node.js ./index.js"
   },
   "keywords": [
     "koa",
@@ -18,5 +18,10 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "koa": "^2.3.0"
+  },
+  "dependencies": {
+    "koa-bodyparser": "^4.2.0",
+    "koa-logger": "^3.0.1",
+    "mongoose": "^4.11.7"
   }
 }
