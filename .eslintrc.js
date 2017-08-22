@@ -1,29 +1,18 @@
 module.exports = {
     "env": {
-        "browser": false,
-        "commonjs": true,
-        "es6": true
+        "node": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaVersion": 2017
     },
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ]
+        "indent": [2, 4],
+        "linebreak-style": [2, "unix"],
+        "quotes": [2, "single"],
+        "semi": [2, "never"],
+        "array-bracket-spacing": [2, "never"],
+        "no-console": 0 //允许使用console
     }
 };

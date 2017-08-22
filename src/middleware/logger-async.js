@@ -4,7 +4,7 @@ function log(ctx) {
 
 export function loggerFunc() {
     return async function (ctx, next) {
-        log(ctx);
-        await next();
+        log(ctx)
+        await next()
     }
 }
