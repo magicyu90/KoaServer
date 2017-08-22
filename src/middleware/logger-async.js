@@ -1,10 +1,10 @@
 function log(ctx) {
-    console.log(ctx.method, ctx.header.host + ctx.url)
+  console.log(ctx.method, ctx.header.host + ctx.url)
 }
 
 export function loggerFunc() {
-    return async function (ctx, next) {
-        log(ctx)
-        await next()
-    }
+  return async function (ctx, next) {
+    log(ctx)
+    await next()
+  }
 }

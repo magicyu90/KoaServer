@@ -12,7 +12,7 @@ mongoose.createConnection(config.database)
 app.use(bodyParser);
 
 app.use(async(ctx) => {
-    ctx.body = "Hello Hugo"
+  ctx.body = 'Hello Hugo'
 })
 
 app.listen(3000)

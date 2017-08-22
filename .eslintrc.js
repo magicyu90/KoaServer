@@ -8,7 +8,7 @@ module.exports = {
         "ecmaVersion": 2017
     },
     "rules": {
-        "indent": [2, 4],
+        "indent": [2, 2],
         "linebreak-style": [2, "unix"],
         "quotes": [2, "single"],
         "semi": [2, "never"],
