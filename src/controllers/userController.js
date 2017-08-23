@@ -2,24 +2,23 @@ import User from '../models/users.js'
 
 export async function createUser(ctx) {
   const user = new User(ctx.request.body)
-
   try {
     await user.save()
-    const token = user.generateToken()
-    const response = user.toJSON()
+  } catch (err) {
+    ctx.throw(422, err.message)
+  }
 
-    delete response.password
+  console.log('user', JSON.stringify(user))
+  const token = user.generateToken()
+  const response = user.toJSON()
 
-    ctx.body = {
-      user: response,
-      token
-    }
+  delete response.password
 
-  } catch (error) {
-    ctx.throw(422, error) //unprocessable entity
+  ctx.body = {
+    user: response,
+    token
   }
 }
-
 
 export async function getUser(ctx) {
   var res = await asyncFunction()
@@ -31,7 +30,7 @@ function asyncFunction() {
     setTimeout(function () {
       resolve({
         'name': 'Hugo',
-        'age': 26
+        'age': 27
       })
     }, 16)
   })

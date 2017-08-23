@@ -11,10 +11,11 @@ const router = new Router()
 
 mongoose.Promise = global.Promise
 
-mongoose.connect(config.database, { useMongoClient: true }).then(
-  () => console.log('connect to db successfully'),
-  (err) => console.error(err)
-)
+// mongoose.connect(config.database, { useMongoClient: true }).then(
+//   () => console.log('connect to db successfully'),
+//   (err) => console.error(err)
+// )
+mongoose.connect(config.database)
 
 app.use(logger())
 app.use(bodyParser())
