@@ -19,12 +19,12 @@ mongoose.connect(config.database, { useMongoClient: true }).then(
 app.use(logger())
 app.use(bodyParser())
 
-router.route('/api', apiRouter)
+router.use('/api', apiRouter.routes(), apiRouter.allowedMethods())
 // app.use(async (ctx) => {
 //   ctx.body = 'Hello Hugo'
 // })
 
-app.use(router.routes()).use(router.allowedMethods())
+app.use(router.routes(), router.allowedMethods())
 
 app.listen(config.port, () => {
   console.log(`[demo] start-quick is starting at port ${config.port}`)
