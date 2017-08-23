@@ -22,6 +22,7 @@ User.methods.validatePassword = (password) => {
   })
 }
 
+
 User.methods.generateToken = () => {
 
   const user = this
