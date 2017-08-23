@@ -1,5 +1,4 @@
 export default {
-  session: 'secret-boilerplate-token',
-  token: 'secret-jwt-token',
+  token: '#~!JwTtoKEn',
   database: 'mongodb://localhost:27017/KoaServer'
 }

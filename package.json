@@ -9,7 +9,8 @@
   },
   "keywords": [
     "koa",
-    "node"
+    "node",
+    "mongoose"
   ],
   "author": "Hugo",
   "license": "ISC",
@@ -22,8 +23,11 @@
     "koa": "^2.3.0"
   },
   "dependencies": {
+    "jsonwebtoken": "^7.4.3",
     "koa-bodyparser": "^4.2.0",
     "koa-logger": "^3.0.1",
-    "mongoose": "^4.11.7"
+    "koa-router": "^7.2.1",
+    "mongoose": "^4.11.7",
+    "passport-local": "^1.0.0"
   }
 }
