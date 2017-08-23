@@ -1,6 +1,6 @@
 import User from '../models/users.js'
 
-export async function createUser(ctx, next) {
+export async function createUser(ctx) {
   const user = new User(ctx.request.body)
 
   try {
@@ -22,17 +22,17 @@ export async function createUser(ctx, next) {
 
 
 export async function getUser(ctx) {
-  var res = await asyncFunction();
+  var res = await asyncFunction()
   ctx.body = res
 }
 
 function asyncFunction() {
-  return new Promise(function (resolve, reject) {
+  return new Promise(function (resolve) {
     setTimeout(function () {
       resolve({
         'name': 'Hugo',
         'age': 26
       })
-    }, 16);
-  });
+    }, 16)
+  })
 }

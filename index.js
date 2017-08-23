@@ -20,9 +20,6 @@ app.use(logger())
 app.use(bodyParser())
 
 router.use('/api', apiRouter.routes(), apiRouter.allowedMethods())
-// app.use(async (ctx) => {
-//   ctx.body = 'Hello Hugo'
-// })
 
 app.use(router.routes(), router.allowedMethods())
 
