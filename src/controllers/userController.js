@@ -1,14 +1,16 @@
 import User from '../models/users.js'
 
 export async function createUser(ctx) {
+
   const user = new User(ctx.request.body)
+  console.log('user', JSON.stringify(user))
+
   try {
     await user.save()
   } catch (err) {
     ctx.throw(422, err.message)
   }
 
-  console.log('user', JSON.stringify(user))
   const token = user.generateToken()
   const response = user.toJSON()
 
